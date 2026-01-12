@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodInput | Better Inputs, Better Health</title>
+    <style>
+        /* --- BRAND VARIABLES --- */
+        :root {
+            --brand-orange: #FF5A36; /* The Active/Vigor Orange */
+            --brand-yellow: #FFD43B;
+            --brand-dark: #111111;
+            --brand-light: #FFF9F5;
+            --brand-white: #FFFFFF;
+            --font-main: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        /* --- BASE STYLES --- */
+        body {
+            font-family: var(--font-main);
+            background-color: var(--brand-light);
+            color: var(--brand-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5em;
+        }
+
+        /* --- UTILITIES --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .highlight {
+            background-color: var(--brand-yellow);
+            padding: 0 5px;
+            border-radius: 4px;
+            display: inline-block;
+            transform: rotate(-1deg);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-bottom: 3px solid var(--brand-dark);
+        }
+
+        /* CSS LOGO DESIGN */
+        .logo {
+            font-size: 28px;
+            font-weight: 900;
+            background: var(--brand-dark);
+            color: var(--brand-white);
+            padding: 5px 15px;
+            transform: skew(-5deg);
+            border: 3px solid var(--brand-dark);
+            box-shadow: 4px 4px 0px var(--brand-orange);
+            display: inline-block;
+        }
+
+        .logo span {
+            color: var(--brand-orange);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* --- PROMPT CARDS GRID --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--brand-white);
+            border: 3px solid var(--brand-dark);
+            border-radius: 12px;
+            padding: 25px;
+            /* The "Pop Art" hard shadow */
+            box-shadow: 8px 8px 0px var(--brand-dark); 
+            transition: transform 0.2s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 12px 12px 0px var(--brand-orange);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .tag {
+            background: var(--brand-orange);
+            color: white;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 4px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        /* --- PROMPT BOX STYLING --- */
+        .prompt-box {
+            background: #f0f0f0;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            margin: 15px 0;
+            border: 1px dashed #999;
+            color: #444;
+        }
+
+        .btn-copy {
+            background: var(--brand-dark);
+            color: white;
+            border: none;
+            width: 100%;
+            padding: 12px;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .btn-copy:hover {
+            background: var(--brand-orange);
+        }
+
+        .btn-copy:active {
+            transform: scale(0.98);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 3px solid var(--brand-dark);
+            background: var(--brand-white);
+            margin-top: 50px;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        /* --- MOBILE TWEAKS --- */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            .logo { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- HEADER -->
+        <nav>
+            <div class="logo">Good<span>Input</span></div>
+            <div style="font-weight: bold;">Menu ☰</div>
+        </nav>
+
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <h1>Garbage In.<br>Garbage Out.<br><span class="highlight">Get Good Input.</span></h1>
+            <p>Don't WebMD yourself into a panic. We curate the best AI prompts to translate medical jargon, reframe anxiety, and simplify nutrition.</p>
+        </div>
+
+        <!-- MAIN CONTENT: THE PROMPT LOCKER -->
+        <div class="grid">
+
+            <!-- Card 1: The Translator -->
+            <div class="card">
+                <span class="card-icon">🩺</span>
+                <span class="tag">Understanding</span>
+                <h3>The "Explain Like I'm 5"</h3>
+                <p>Use this when your doctor uses big words and you leave the appointment confused.</p>
+                <div class="prompt-box" id="p1">
+                    "I am going to paste a medical note below. Explain it to me in two ways: 1) Like I am 5 years old using simple metaphors. 2) Like a supportive friend telling me the actionable next steps. Keep it optimistic."
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('p1', this)">Copy Prompt</button>
+            </div>
+
+            <!-- Card 2: The Symptom Checker -->
+            <div class="card">
+                <span class="card-icon">🕵️‍♀️</span>
+                <span class="tag">Triage</span>
+                <h3>The Logic Nurse</h3>
+                <p>Stop the panic spiral. Get a logical assessment of urgency without the doom.</p>
+                <div class="prompt-box" id="p2">
+                    "Act as a calm, logical triage nurse. I will list my symptoms. Ask me 3 clarifying questions one by one to narrow it down. Do not give a diagnosis, but tell me the urgency level (Home care, GP, or Hospital) and why."
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('p2', this)">Copy Prompt</button>
+            </div>
+
+            <!-- Card 3: Mental Health -->
+            <div class="card">
+                <span class="card-icon">🧠</span>
+                <span class="tag">Mental</span>
+                <h3>The CBT Reframer</h3>
+                <p>Turn a negative thought loop into a balanced perspective using therapy techniques.</p>
+                <div class="prompt-box" id="p3">
+                    "I am feeling overwhelmed. Here is the thought looping in my head: '[INSERT THOUGHT]'. Apply Cognitive Behavioral Therapy techniques to reframe this thought into three alternative, balanced perspectives."
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('p3', this)">Copy Prompt</button>
+            </div>
+
+            <!-- Card 4: Nutrition -->
+            <div class="card">
+                <span class="card-icon">🥑</span>
+                <span class="tag">Food</span>
+                <h3>The Fridge Scavenger</h3>
+                <p>Eat healthy with what you have. No shopping trips required.</p>
+                <div class="prompt-box" id="p4">
+                    "I have these ingredients: [LIST INGREDIENTS]. Create a healthy recipe using only these, but make it in the style of [MEXICAN/THAI/ITALIAN] street food. Give it a fun name."
+                </div>
+                <button class="btn-copy" onclick="copyToClipboard('p4', this)">Copy Prompt</button>
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+        <footer>
+            <h3>GoodInput</h3>
+            <p>Your health, prompted.</p>
+            <p class="disclaimer"><strong>Disclaimer:</strong> GoodInput provides prompts for AI tools (like ChatGPT). AI makes mistakes. We are not doctors. Always consult a real medical professional for health decisions.</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId, btnElement) {
+            // Get the text field
+            var copyText = document.getElementById(elementId).innerText;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(copyText).then(function() {
+                // Change button text temporarily
+                var originalText = btnElement.innerText;
+                btnElement.innerText = "COPIED! ✅";
+                btnElement.style.backgroundColor = "#4a90e2"; // Blue feedback
+                
+                setTimeout(function(){ 
+                    btnElement.innerText = originalText;
+                    btnElement.style.backgroundColor = ""; // Revert color
+                }, 2000);
+            }, function(err) {
+                console.error('Async: Could not copy text: ', err);
+            });
+        }
+    </script>
+
+</body>
+</html>
